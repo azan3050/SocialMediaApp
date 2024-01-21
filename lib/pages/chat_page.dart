@@ -63,10 +63,11 @@ class _ChatPageState extends State<ChatPage> {
         // shape: Border(
         //     bottom:
         //         BorderSide(color: Color.fromARGB(29, 19, 18, 19), width: 2)),
-        elevation: 4,
+        elevation: 10,
         backgroundColor: Colors.indigo.shade200,
         title: Text(widget.recieversEmail),
       ),
+      backgroundColor: Colors.grey.shade200,
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(

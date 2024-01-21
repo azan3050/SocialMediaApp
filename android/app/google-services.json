@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "837123087251",
+    "project_id": "messagingapp-1a4ad",
+    "storage_bucket": "messagingapp-1a4ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:837123087251:android:12d3237078d9834768a666",
+        "android_client_info": {
+          "package_name": "com.example.riyal_talks"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7XYFnJAZYWljUgX4GSBXYOcbQksTDuYU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

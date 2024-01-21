@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:riyal_talks/pages/profile_page.dart';
 import 'package:riyal_talks/pages/settings_page.dart';
 
 import '../authentication/auth_page.dart';
@@ -32,6 +33,33 @@ class _MyDrawerState extends State<MyDrawer> {
                     Icon(
                       Icons.textsms_outlined,
                       size: 80,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ProfilePage()));
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Icon(
+                            Icons.person,
+                            size: 30,
+                          ),
+                          Text('P R O F I L E',
+                              style: GoogleFonts.alike(
+                                textStyle: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20,
+                                ),
+                              ))
+                        ],
+                      ),
                     ),
                     SizedBox(
                       height: 20,

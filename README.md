@@ -4,8 +4,8 @@ Riyal Talks is a text messenger app built on Flutter, designed for learning purp
 
 # Prerequisites
 
--Flutter SDK installed
--A code editor (such as Visual Studio Code)
+- Flutter SDK installed
+- A code editor (such as Visual Studio Code)
 
 # Installation
 
@@ -16,5 +16,5 @@ Riyal Talks is a text messenger app built on Flutter, designed for learning purp
 
 # FireBase
 
--FirebaseAuthentication
--FirebaseFirestore
+- FirebaseAuthentication
+- FirebaseFirestore
