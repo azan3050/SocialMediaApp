@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:riyal_talks/authentication/auth_page.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+   final VoidCallback showSignUpPage;
+   const LoginPage({super.key, required this.showSignUpPage});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
+
   bool _passwordVisible = false;
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   @override
   void initState(){
@@ -16,13 +21,27 @@ class _LoginPageState extends State<LoginPage> {
     _passwordVisible = true;
   }
 
+  void login() async{
+    final authPage = AuthPage();
+    try{
+      await authPage.signInWithEmailPassword(
+          _emailController.text,
+          _passwordController.text);
+    } catch(e) {
+      showDialog(context: context,
+          builder: (context) => AlertDialog(
+            title: Text(e.toString()),
+          ));
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Scaffold(
-        body: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Center(
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Center(
+          child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -49,7 +68,9 @@ class _LoginPageState extends State<LoginPage> {
                 ),),
                 const SizedBox(height: 20,),
                 TextField(
-                  decoration: InputDecoration(
+                  controller: _emailController,
+                    textInputAction: TextInputAction.next,
+                    decoration: InputDecoration(
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(50)
                       ),
@@ -59,6 +80,8 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 const SizedBox(height: 20,),
                 TextField(
+                  controller: _passwordController,
+                  textInputAction: TextInputAction.next,
                   obscureText: _passwordVisible,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
@@ -94,32 +117,37 @@ class _LoginPageState extends State<LoginPage> {
                   width: 1000,
                   height: 55,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      login();
+                    },
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50.0)),
+                      backgroundColor: Colors.blueGrey,
+                    ),
                     child: const Text(
                         'LOGIN',
                         style: TextStyle(
                         fontSize: 15,
                         color: Colors.white
-                    ),),
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(50.0)),
-                      backgroundColor: Colors.blueGrey,
-                    ),),
+                    ),),),
                 ),
                 const SizedBox(height: 20,),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Do not have an account ?', style: TextStyle(
+                    const Text('Do not have an account ?', style: TextStyle(
                       fontSize: 15,
                       color: Colors.black,
                     ),),
-                    SizedBox(width: 10,),
-                    Text('SignUp', style: TextStyle(
-                      fontSize: 15,
-                      color: Colors.blueGrey,
-                    ),)
+                    const SizedBox(width: 10,),
+                     GestureDetector(
+                       onTap: widget.showSignUpPage,
+                       child: const Text('Sign Up', style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.blueGrey,
+                    ),),
+                     ),
                   ],
                 )
               ],

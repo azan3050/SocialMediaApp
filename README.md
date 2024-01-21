@@ -1,19 +1,20 @@
 # riyal_talks
 
-- It is a text messenger app.
-- It is build on flutter.
-- This is only for learning purpose.
-- It is a college project.
+Riyal Talks is a text messenger app built on Flutter, designed for learning purposes and as a college project.
 
-## Getting Started
+# Prerequisites
 
-This project is a starting point for a Flutter application.
+-Flutter SDK installed
+-A code editor (such as Visual Studio Code)
 
-A few resources to get you started if this is your first Flutter project:
+# Installation
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1. Clone the repository
+2. Navigate to the project directory
+3. Install the dependencies
+4. Run the app
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# FireBase
+
+-FirebaseAuthentication
+-FirebaseFirestore
