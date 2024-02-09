@@ -28,6 +28,7 @@ class _LoginPageState extends State<LoginPage> {
           _emailController.text,
           _passwordController.text);
     } catch(e) {
+      // ignore: use_build_context_synchronously
       showDialog(context: context,
           builder: (context) => AlertDialog(
             title: Text(e.toString()),

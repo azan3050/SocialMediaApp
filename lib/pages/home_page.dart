@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:riyal_talks/components/drawer.dart';
-
 import 'chat_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -53,10 +52,10 @@ class _HomePageState extends State<HomePage> {
           decoration: BoxDecoration(
             border: Border.all(),
             borderRadius: BorderRadius.circular(12),
-            color: Color.fromARGB(6, 12, 157, 109),
+            color: const Color.fromARGB(6, 12, 157, 109),
           ),
           child: ListTile(
-            leading: CircleAvatar(
+            leading: const CircleAvatar(
               radius: 25,
               backgroundImage: AssetImage("assets/profile.png"),
             ),

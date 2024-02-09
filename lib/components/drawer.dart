@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:riyal_talks/pages/profile_page.dart';
 import 'package:riyal_talks/pages/settings_page.dart';
 
@@ -52,12 +51,11 @@ class _MyDrawerState extends State<MyDrawer> {
                             size: 30,
                           ),
                           Text('P R O F I L E',
-                              style: GoogleFonts.alike(
-                                textStyle: TextStyle(
+                              style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 20,
                                 ),
-                              ))
+                              )
                         ],
                       ),
                     ),
@@ -76,12 +74,11 @@ class _MyDrawerState extends State<MyDrawer> {
                             size: 30,
                           ),
                           Text('H O M E',
-                              style: GoogleFonts.alike(
-                                textStyle: TextStyle(
+                              style:  TextStyle(
                                   color: Colors.black,
                                   fontSize: 20,
                                 ),
-                              ))
+                              )
                         ],
                       ),
                     ),
@@ -103,12 +100,11 @@ class _MyDrawerState extends State<MyDrawer> {
                             size: 30,
                           ),
                           Text('S E T T I N G S',
-                              style: GoogleFonts.alike(
-                                textStyle: TextStyle(
+                              style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 20,
                                 ),
-                              ))
+                              )
                         ],
                       ),
                     ),
@@ -127,12 +123,11 @@ class _MyDrawerState extends State<MyDrawer> {
                             size: 30,
                           ),
                           Text('A B O U T',
-                              style: GoogleFonts.alike(
-                                textStyle: TextStyle(
+                              style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 20,
                                 ),
-                              ))
+                              )
                         ],
                       ),
                     ),
@@ -146,12 +141,11 @@ class _MyDrawerState extends State<MyDrawer> {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Text('L O G O U T',
-                              style: GoogleFonts.alike(
-                                textStyle: TextStyle(
+                              style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 20,
                                 ),
-                              )),
+                              ),
                           Icon(Icons.login_outlined),
                         ],
                       ),
